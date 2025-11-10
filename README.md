@@ -176,6 +176,27 @@ Ejemplo de checklist:
 - `[x]` crea una casilla marcada.
 - Es importante dejar un espacio en blanco entre los corchetes en las casillas vacías.
 
+# Introducción a HTML
+
+HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. Es el lenguaje más importante de Internet, ya que sin HTML no se vería nada en el navegador.
+
+HTML define la estructura y el contenido de las páginas web mediante etiquetas. Es adaptable, tiene una estructura lógica y es fácil de entender. HTML **describe el contenido**, no su comportamiento (eso lo hacen otros lenguajes como JavaScript) ni su diseño visual (para eso usamos CSS).
+
+Los elementos HTML son los bloques de construcción de las páginas web.
+
+Cada elemento HTML está delimitado por etiquetas como `<html>`, `<head>`, `<body>`, `<p>`, `<h1>`, etc.
+
+# Nota:
+HTML es un lenguaje de marcado, no un lenguaje de programación. No tiene bucles, condicionales o funciones como tal; su función es estructurar la información.
+
+## Significado de HTML (HyperText Markup Language)
+
+- **HyperText**: texto que enlaza con otros contenidos (otras páginas o recursos). Es la base del funcionamiento de la web como red de documentos conectados.
+- **Markup**: marca o etiqueta. Todas las páginas web están construidas en base a etiquetas. Una etiqueta HTML identifica partes del contenido, por ejemplo:
+  
+  ```html
+  <p>Hola</p>
+
 
 
 
