@@ -91,3 +91,37 @@ Sublista desordenada:
 <!-- Explicación: `*`, `-` o `+` crean listas con viñetas.
      La sangría (tabulador o espacios) crea sublistas dentro de otra lista. -->
 
+### Párrafos
+
+Para crear un nuevo párrafo se deja una línea en blanco entre bloques de texto.
+
+Ejemplo:
+
+    Este es el primer párrafo.
+
+    Este es el segundo párrafo.
+
+<!-- Explicación: si no dejamos línea en blanco, Markdown lo interpreta como un mismo párrafo. -->
+
+### Código
+
+Código en línea:
+
+    Esto es `codigo_en_linea`.
+
+Bloques de código:
+
+Usamos tres acentos graves (backticks) antes y después del bloque:
+
+    ```html
+    <html>
+        <head></head>
+        <body></body>
+    </html>
+    ```
+
+<!-- Explicación:
+     - Los backticks (`) se usan para marcar código.
+     - Con tres backticks creamos bloques de código.
+     - Podemos indicar el lenguaje (html, javascript, etc.) tras los tres backticks. -->
+
