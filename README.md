@@ -608,3 +608,4 @@ Sintaxis básica:
 
 # Comentario: Siempre hay que indicar el atributo `alt` para accesibilidad, SEO y buena práctica.
 
+
