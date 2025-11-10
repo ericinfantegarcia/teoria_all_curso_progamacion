@@ -841,3 +841,101 @@ La etiqueta para insertar imágenes es `<img>`, que es un elemento en línea y v
 
 # Comentario: Siempre se debe usar `alt` por accesibilidad, SEO y buenas prácticas.
 
+## Elementos semánticos en HTML5
+
+HTML semántico significa usar etiquetas que describen el tipo de contenido que encierran, facilitando la comprensión para personas y navegadores.
+
+- `<header>`: cabecera de la página o sección.
+- `<footer>`: pie de página o sección.
+- `<nav>`: zona de navegación con enlaces principales.
+- `<section>`: sección genérica de contenido relacionado.
+- `<article>`: contenido independiente (post, noticia, etc.).
+- `<aside>`: contenido relacionado pero secundario (barra lateral).
+- `<main>`: contenido principal del documento.
+- `<figure>` y `<figcaption>`: imágenes/medios con su pie.
+
+# Comentario: Usar estas etiquetas en lugar de solo `<div>` da significado al contenido, mejora accesibilidad y SEO.
+
+
+## Etiquetas de formularios: `<form>`
+
+La etiqueta `<form>` crea un formulario para enviar datos a un servidor o realizar acciones.
+
+Atributos comunes:
+
+- `action`: URL a la que se envían los datos.
+
+      <form action="procesar.php">
+
+- `method`: método de envío (`get` o `post`).
+
+      <form action="procesar.php" method="post">
+
+- `enctype`: cómo se codifican los datos. Ejemplo para subir archivos:
+
+      <form action="subir.php" method="post" enctype="multipart/form-data">
+
+- `target`: dónde se muestra la respuesta.
+
+  - `_self`: (por defecto) misma pestaña.
+  - `_blank`: nueva pestaña/ventana.
+
+# Comentario: `<form>` es el contenedor de todos los campos del formulario.
+
+
+## Etiquetas de formularios: `<input>`
+
+`<input>` crea campos interactivos. Es un elemento vacío (sin cierre separado).
+
+Atributos comunes:
+
+- `type`: define el tipo de campo.
+
+      <input type="text">
+      <input type="password">
+      <input type="email">
+      <input type="number">
+      <input type="file">
+      <input type="checkbox">
+      <input type="radio">
+      <input type="date">
+      <input type="submit">
+      <input type="reset">
+      <input type="url">
+
+- `id`: identificador único, útil para asociar `<label>`.
+
+      <input id="nombre">
+
+- `name`: nombre del campo (clave que recibe el servidor).
+
+      <input name="nombre">
+
+- `value`: valor inicial del campo.
+
+- `placeholder`: texto de ayuda cuando el campo está vacío.
+
+- `required`: campo obligatorio.
+
+- `disabled`: desactiva el campo.
+
+- `readonly`: solo lectura (no editable).
+
+# Comentario: `name` es clave para el envío de datos; sin `name`, ese input no viaja al servidor.
+
+
+## Input type radio y checkbox
+
+### `type="radio"`
+
+Botones de opción, permiten elegir **solo una** opción dentro de un grupo (mismo `name`).
+
+```html
+<form>
+    <p>Elige tu género musical favorito:</p>
+    <label><input type="radio" name="genero" value="rock" checked> Rock</label>
+    <label><input type="radio" name="genero" value="pop"> Pop</label>
+    <label><input type="radio" name="genero" value="jazz"> Jazz</label>
+    <button type="submit">Enviar</button>
+</form>
+
