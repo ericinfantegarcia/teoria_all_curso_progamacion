@@ -61,3 +61,33 @@ Anidar estilos (combinar formatos):
 <!-- Explicación: con estos símbolos añadimos formato al texto.
      Se pueden combinar para usar negrita y cursiva al mismo tiempo. -->
 
+
+### Listas
+
+#### Listas ordenadas
+
+    1. Primer elemento de lista
+    2. Segundo elemento de lista
+    3. Tercer elemento de lista
+
+- El número en el código no tiene que ser exacto, Markdown genera la numeración correcta al mostrarlo.
+
+Sublista ordenada (usando sangría):
+
+    1. Elemento principal
+        1. Sub-elemento ordenado
+
+#### Listas desordenadas
+
+    * Elemento de lista desordenada
+    - Otro elemento de lista desordenada
+    + Otro elemento de lista desordenada
+
+Sublista desordenada:
+
+    * Elemento
+        * Sub-elemento
+
+<!-- Explicación: `*`, `-` o `+` crean listas con viñetas.
+     La sangría (tabulador o espacios) crea sublistas dentro de otra lista. -->
+
