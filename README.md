@@ -366,6 +366,74 @@ Para marcar el destino:
 ```html
 <h2 id="seccion1">Sección 1</h2>
 
+Comentario: El atributo id identifica el punto al que queremos saltar y el enlace con href="#id" crea la navegación interna o entre documentos hacia esa ancla.
+Contenedores <div>
+
+Un <div> es una caja o contenedor de tipo bloque que se utiliza para agrupar diferentes elementos dentro de una página web.
+
+Se usa para:
+
+Organizar contenido en secciones (cabecera, cuerpo, pie, columnas, etc.).
+
+Aplicar estilos CSS a conjuntos de elementos.
+
+Trabajar con JavaScript sobre partes concretas del documento.
+
+Ejemplo:
+
+<div class="myDiv">
+    <h2>Título dentro del div</h2>
+    <p>Este es un texto dentro de un div.</p>
+</div>
+
+Comentario: <div> sirve para dividir y agrupar contenido, pero no aporta significado semántico; solo estructura.
+Elementos semánticos en HTML5
+
+Los elementos semánticos permiten describir el contenido dándole un significado correcto, mejor que usar solo <div> para todo.
+
+Ejemplos:
+
+<header>: cabecera de la página o sección.
+
+<footer>: pie de página o sección.
+
+<nav>: bloque de navegación.
+
+<section>: sección temática de contenido.
+
+<article>: contenido independiente (noticia, post, entrada de blog).
+
+<figure>: contenido ilustrativo (imagen, gráfico, etc.) con posible pie.
+
+Comentario: El HTML semántico ayuda a que navegadores, buscadores y lectores de pantalla entiendan qué es cada parte del contenido.
+Legibilidad y organización del código
+
+La legibilidad del código fuente es la claridad con la que está escrito para que cualquier persona pueda entenderlo de manera fácil y rápida. Es fundamental que el código HTML sea legible.
+
+Debemos tener en cuenta que:
+
+Normalmente no trabajaremos solos.
+
+Otro desarrollador debe poder entender qué hemos hecho y por qué.
+
+Incluso nosotros mismos, al volver al proyecto, necesitamos recordar la lógica.
+
+Por organización del código entenderemos:
+
+Estructurar la aplicación en varios archivos cuando sea necesario.
+
+Colocar los archivos en directorios adecuados.
+
+Técnicas clave:
+
+Uso de comentarios.
+
+Buena indentación.
+
+Organización coherente de los archivos.
+
+
+
 
 
 
