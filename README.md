@@ -151,4 +151,51 @@ Sintaxis con referencia:
      - La sintaxis de imagen es igual que la de enlace, pero con `!` delante.
      - El texto alternativo describe la imagen y mejora la accesibilidad. -->
 
+### Tablas
 
+Ejemplo de tabla en Markdown:
+
+    | Tables        | Are           | Cool |
+    |--------------:|:------------:|-----:|
+    | col 3 is      | right-aligned| $1600|
+    | col 2 is      | centered     |   $12|
+    | zebra stripes | are neat     |    $1|
+
+- La primera línea define los encabezados.
+- La segunda línea usa guiones y dos puntos para marcar alineación:
+  - `:---` izquierda
+  - `:---:` centrado
+  - `---:` derecha
+- No es necesario que las barras verticales estén perfectamente alineadas visualmente.
+
+<!-- Explicación: las tablas se construyen con `|` y `-`.
+     Los dos puntos controlan la alineación de cada columna. -->
+
+### Notas al pie de página
+
+Ejemplo:
+
+    Texto con nota al pie[^1]
+
+    [^1]: Aquí encuentras el texto de la nota al pie.
+
+<!-- Explicación:
+     - `[^1]` es la referencia en el texto.
+     - `[^1]:` define el contenido de la nota al pie. -->
+
+### Listas de verificación
+
+Ejemplo de checklist:
+
+    - [ ] A
+    - [x] B
+    - [ ] C
+
+- `[ ]` crea una casilla vacía.
+- `[x]` crea una casilla marcada.
+- Es importante dejar un espacio en blanco entre los corchetes en las casillas vacías.
+
+<!-- Explicación:
+     Muy usado en GitHub para listas de tareas y seguimiento de trabajo. -->
+
+     
