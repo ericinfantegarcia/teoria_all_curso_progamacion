@@ -316,6 +316,7 @@ Dentro del `<body>` los elementos se dividen en:
 
 ### Elementos de bloque (block)
 
+
 - Ocupan todo el ancho disponible.
 - Empiezan en una nueva línea.
 - Pueden contener otros elementos.
@@ -359,81 +360,251 @@ Ejemplos:
 
 ## Enlaces internos (anclas)
 
-Algunos documentos HTML pueden ser muy extensos y puede interesarnos navegar dentro de la misma página. Para ello usamos anclas, combinando el atributo `id` en el elemento destino con enlaces que usan `href="#id"`.
+Algunos documentos HTML pueden ser muy extensos y puede interesarnos navegar dentro de la misma página sin recargarla. Para ello utilizamos **anclas**, combinando el atributo `id` en el elemento destino con enlaces que apuntan a ese identificador.
 
-Para marcar el destino:
+### Definir el destino
 
-```html
-<h2 id="seccion1">Sección 1</h2>
+    <h2 id="seccion1">Sección 1</h2>
 
-Comentario: El atributo id identifica el punto al que queremos saltar y el enlace con href="#id" crea la navegación interna o entre documentos hacia esa ancla.
-Contenedores <div>
+### Enlace dentro de la misma página
 
-Un <div> es una caja o contenedor de tipo bloque que se utiliza para agrupar diferentes elementos dentro de una página web.
+    <a href="#seccion1" title="Sección 1">Ir a la sección 1</a>
 
-Se usa para:
+### Enlace a un ancla en otro documento
 
-Organizar contenido en secciones (cabecera, cuerpo, pie, columnas, etc.).
+    <a href="secciones.html#seccion1" title="Sección 1">Ir a la sección 1</a>
 
-Aplicar estilos CSS a conjuntos de elementos.
+# Comentario: El atributo `id` marca el punto de destino y `href="#id"` o `href="archivo.html#id"` permite crear enlaces internos o entre páginas hacia esa ancla.
 
-Trabajar con JavaScript sobre partes concretas del documento.
 
-Ejemplo:
+## Contenedores `<div>`
 
-<div class="myDiv">
-    <h2>Título dentro del div</h2>
-    <p>Este es un texto dentro de un div.</p>
-</div>
+La etiqueta `<div>` define una **caja o contenedor de bloque** que sirve para agrupar diferentes elementos dentro de una página web.
 
-Comentario: <div> sirve para dividir y agrupar contenido, pero no aporta significado semántico; solo estructura.
-Elementos semánticos en HTML5
+### Usos principales
 
-Los elementos semánticos permiten describir el contenido dándole un significado correcto, mejor que usar solo <div> para todo.
+- Organizar contenido en secciones (cabecera, contenido, columnas, pie, etc.).
+- Aplicar estilos CSS a grupos de elementos mediante clases o identificadores.
+- Trabajar con JavaScript sobre partes específicas del documento.
 
-Ejemplos:
+### Ejemplo
 
-<header>: cabecera de la página o sección.
+    <div class="myDiv">
+        <h2>Título dentro del div</h2>
+        <p>Este es un texto dentro de un div.</p>
+    </div>
 
-<footer>: pie de página o sección.
+# Comentario: `<div>` estructura y agrupa contenido, pero no aporta significado semántico; para eso existen los elementos semánticos.
 
-<nav>: bloque de navegación.
 
-<section>: sección temática de contenido.
+## Elementos semánticos en HTML5
 
-<article>: contenido independiente (noticia, post, entrada de blog).
+Los elementos semánticos permiten describir el contenido dándole un significado correcto, en lugar de usar solo `<div>` para todo.
 
-<figure>: contenido ilustrativo (imagen, gráfico, etc.) con posible pie.
+### Ejemplos
 
-Comentario: El HTML semántico ayuda a que navegadores, buscadores y lectores de pantalla entiendan qué es cada parte del contenido.
-Legibilidad y organización del código
+- `<header>`: cabecera de la página o de una sección.
+- `<footer>`: pie de página o de una sección.
+- `<nav>`: bloque de navegación.
+- `<section>`: sección temática de contenido.
+- `<article>`: contenido independiente (noticia, post, entrada de blog).
+- `<figure>`: contenido ilustrativo (imagen, gráfico, etc.), normalmente con `<figcaption>`.
 
-La legibilidad del código fuente es la claridad con la que está escrito para que cualquier persona pueda entenderlo de manera fácil y rápida. Es fundamental que el código HTML sea legible.
+# Comentario: El HTML semántico mejora la accesibilidad, el SEO y la claridad del código al indicar qué representa cada parte.
+
+
+## Legibilidad y organización del código
+
+La legibilidad del código fuente es la claridad con la que está escrito, de forma que cualquier persona pueda entenderlo fácil y rápidamente. Es fundamental que el HTML sea legible.
 
 Debemos tener en cuenta que:
 
-Normalmente no trabajaremos solos.
+- Normalmente no trabajaremos solos.
+- Otros desarrolladores pueden necesitar modificar nuestro código.
+- Nosotros mismos tendremos que entenderlo tiempo después.
 
-Otro desarrollador debe poder entender qué hemos hecho y por qué.
+### Técnicas para mejorar la legibilidad
 
-Incluso nosotros mismos, al volver al proyecto, necesitamos recordar la lógica.
+- Usar comentarios para marcar secciones o aclarar partes complejas.
+- Mantener una indentación correcta y consistente.
+- Organizar los archivos en directorios lógicos.
+- Separar correctamente estructura (HTML), estilos (CSS) y lógica (JS) cuando proceda.
 
-Por organización del código entenderemos:
-
-Estructurar la aplicación en varios archivos cuando sea necesario.
-
-Colocar los archivos en directorios adecuados.
-
-Técnicas clave:
-
-Uso de comentarios.
-
-Buena indentación.
-
-Organización coherente de los archivos.
+# Comentario: Un código bien organizado facilita el mantenimiento, la colaboración y la detección de errores.
 
 
+## Comentarios en HTML
+
+Los comentarios permiten añadir anotaciones que no se mostrarán en el navegador, pero son útiles para el desarrollador.
+
+### Sintaxis
+
+    <!-- comentario -->
+
+### Ejemplo de uso estructural
+
+    <body>
+        <!-- Cabecera -->
+        <!-- Menú de navegación -->
+        <!-- Columna lateral con enlaces -->
+        <!-- Sección principal con artículos -->
+        <!-- Pie de página -->
+    </body>
+
+# Comentario: Es recomendable comentar secciones largas o importantes para localizar rápidamente cada parte del documento.
 
 
+## Etiquetas básicas de HTML (resumen)
 
+### Encabezados `<h1>` ... `<h6>`
+
+Permiten especificar títulos y subtítulos del contenido.
+
+- Son elementos de bloque.
+- `<h1>` suele ser el título principal de la página.
+
+### Párrafos `<p>`
+
+Se utilizan para encerrar párrafos de texto (conjunto de frases relacionadas).
+
+- Son elementos de bloque.
+
+### Salto de línea `<br>`
+
+Inserta un salto de línea dentro de un texto sin crear un nuevo párrafo.
+
+- Es un elemento vacío (no tiene cierre).
+
+### Separador de línea `<hr>`
+
+Crea una línea horizontal divisoria que separa visualmente bloques de contenido.
+
+- Es un elemento vacío de bloque.
+
+### Énfasis `<em>` y `<strong>`
+
+- `<em>`: marca texto con énfasis (normalmente cursiva).
+- `<strong>`: marca texto con énfasis fuerte (normalmente negrita).
+
+# Comentario: `<em>` y `<strong>` tienen valor semántico (indican importancia), no solo visual.
+
+### Span `<span>`
+
+`<span>` es un contenedor en línea que se usa para agrupar pequeñas partes de texto o elementos en una misma línea, generalmente para aplicar estilos o identificarlos.
+
+- Es un elemento en línea.
+- No rompe el flujo del texto.
+
+
+## Listas en HTML
+
+### Listas desordenadas `<ul>`
+
+Se utilizan cuando el orden de los elementos no es relevante.
+
+Estructura:
+
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+Históricamente se podía usar el atributo `type` (`disc`, `square`, `circle`), aunque hoy se prefiere controlar la apariencia con CSS.
+
+### Listas ordenadas `<ol>`
+
+Se utilizan cuando el orden de los elementos sí es importante (pasos, instrucciones, etc.).
+
+Estructura:
+
+    <ol>
+        <li>Paso 1</li>
+        <li>Paso 2</li>
+        <li>Paso 3</li>
+    </ol>
+
+Opciones de numeración con el atributo `type`:
+
+- `type="1"` → 1, 2, 3...
+- `type="A"` → A, B, C...
+- `type="a"` → a, b, c...
+- `type="I"` → I, II, III...
+- `type="i"` → i, ii, iii...
+
+Otros atributos útiles:
+
+- `start="10"`: comienza la lista desde el número 10.
+- `value="4"` en un `<li>`: fuerza un número concreto para ese elemento.
+
+# Comentario: En cualquier tipo de lista, cada elemento debe ir siempre dentro de una etiqueta `<li>`.
+
+
+## Listas de definición `<dl>`, `<dt>`, `<dd>`
+
+Se utilizan para representar términos y sus definiciones.
+
+Estructura general:
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcas diseñado para estructurar documentos en la web.</dd>
+
+        <dt>XML</dt>
+        <dd>Metalenguaje extensible de etiquetas usado para definir otros lenguajes.</dd>
+    </dl>
+
+- `<dl>`: lista de definición.
+- `<dt>`: término (definition term).
+- `<dd>`: definición del término (definition description).
+
+# Comentario: Son ideales para glosarios o para parejas concepto–explicación.
+
+
+## Rutas en HTML (absolutas y relativas)
+
+Cuando necesitamos enlazar a otros archivos (HTML, CSS, imágenes, etc.) usamos rutas para indicar su ubicación.
+
+### Ruta absoluta
+
+Especifica la dirección completa del recurso incluyendo el dominio.
+
+Ejemplo:
+
+    <img src="https://www.ejemplo.com/images/logo.png" alt="Logo del sitio">
+
+- Útil cuando el recurso está en otro servidor o dominio.
+
+### Ruta relativa
+
+Especifica la ubicación del recurso en relación con el archivo actual.
+
+Ejemplo de estructura:
+
+    /mi-sitio/
+        index.html
+        /images/
+            logo.png
+
+Ejemplo de uso:
+
+    <img src="images/logo.png" alt="Logo de mi sitio">
+
+# Comentario: Las rutas relativas facilitan mover el proyecto completo sin romper los enlaces internos.
+
+
+## Imágenes en HTML
+
+Las imágenes son un recurso muy utilizado en el desarrollo web. Además de hacer más atractiva la aplicación, permiten transmitir información de forma visual.
+
+La etiqueta para insertar imágenes es `<img>`, que es un elemento en línea y vacío (no tiene etiqueta de cierre clásica).
+
+Sintaxis básica:
+
+    <img src="media/logo.png" alt="Logo de la web" />
+
+- `src`: indica la ruta (absoluta o relativa) del archivo de imagen.
+- `alt`: texto alternativo que se mostrará si la imagen no se carga y que usan los lectores de pantalla.
+
+# Comentario: Siempre hay que indicar el atributo `alt` para accesibilidad, SEO y buena práctica.
 
