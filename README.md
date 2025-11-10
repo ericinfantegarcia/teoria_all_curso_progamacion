@@ -353,4 +353,19 @@ Ejemplos:
     <cite>...</cite>
 
 
+# Teoría HTML (Ampliación)
+
+# Comentario: Esta sección amplía la teoría de HTML con enlaces internos (anclas), contenedores, elementos semánticos, legibilidad, comentarios, listas, rutas e imágenes.
+
+## Enlaces internos (anclas)
+
+Algunos documentos HTML pueden ser muy extensos y puede interesarnos navegar dentro de la misma página. Para ello usamos anclas, combinando el atributo `id` en el elemento destino con enlaces que usan `href="#id"`.
+
+Para marcar el destino:
+
+```html
+<h2 id="seccion1">Sección 1</h2>
+
+
+
 
