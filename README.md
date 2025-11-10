@@ -197,6 +197,160 @@ HTML es un lenguaje de marcado, no un lenguaje de programación. No tiene bucles
   ```html
   <p>Hola</p>
 
+## Introducción a HTML
+
+HTML (HyperText Markup Language) es el lenguaje de marcado estándar para crear páginas web. Es esencial porque sin HTML no se mostraría contenido en el navegador.
+
+HTML define la estructura y el contenido de las páginas web mediante etiquetas. Es un lenguaje:
+
+- Basado en etiquetas.
+- Lógico y fácil de leer.
+- Que describe el contenido, no el estilo (CSS) ni la lógica de programación (JavaScript).
+
+Las siglas significan:
+
+- **HyperText**: texto que puede enlazar con otros documentos o recursos.
+- **Markup**: marcado o etiquetado del contenido usando etiquetas.
+- **Language**: conjunto de reglas y sintaxis propias, pero no es un lenguaje de programación.
+
+# Comentario: Importante dejar claro que HTML organiza y marca contenido, no programa lógica.
+
+## Elementos HTML
+
+Un elemento HTML suele estar formado por:
+
+- Etiqueta de apertura.
+- Contenido.
+- Etiqueta de cierre.
+
+Ejemplo:
+
+    <p>Mi gato es muy gruñón</p>
+
+- `<p>` es la etiqueta de apertura.
+- `Mi gato es muy gruñón` es el contenido.
+- `</p>` es la etiqueta de cierre.
+
+Los elementos deben anidarse correctamente:
+
+    <p>Texto con <b>negrita</b> correcta</p>
+
+Ejemplo incorrecto:
+
+    <p>Texto con <b>negrita</p></b>
+
+## Atributos HTML
+
+Los atributos añaden información extra a un elemento.
+
+Ejemplo:
+
+    <p class="editor-note">Mi gato es muy gruñón</p>
+
+Reglas básicas:
+
+- Se escriben en la etiqueta de apertura.
+- Formato: nombre="valor".
+- Siempre separados por espacios.
+
+Ejemplos típicos:
+
+    <img src="imagen.jpg" alt="Descripción">
+    <a href="https://ejemplo.com">Enlace</a>
+
+Existen elementos vacíos (sin contenido interno), como:
+
+    <img src="foto.jpg" alt="Foto">
+    <br>
+    <input type="text">
+
+## Resumen de normas básicas de etiquetas HTML
+
+- Normalmente vienen en pares: apertura y cierre.
+- Algunas son vacías y no tienen cierre (img, br, input).
+- Deben anidarse correctamente.
+- Los atributos se indican en la etiqueta de apertura con nombre="valor".
+- Recomendación: usar siempre minúsculas en etiquetas y atributos.
+
+# Comentario: Estas normas evitan errores comunes y aseguran que el navegador interprete bien la página.
+
+## Estructura básica de un fichero HTML
+
+Una página HTML básica incluye:
+
+- Declaración `<!DOCTYPE html>`.
+- Elemento `<html>`.
+- Dentro de `<html>`, un `<head>` y un `<body>`.
+
+Ejemplo:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mi página de prueba</title>
+        <link rel="icon" href="favicon.png">
+    </head>
+    <body>
+        <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+    </body>
+    </html>
+
+Explicación rápida:
+
+- `<!DOCTYPE html>`: tipo de documento (HTML5).
+- `<html>`: raíz del documento.
+- `<head>`: metadatos, título, enlaces a CSS, scripts, iconos, SEO, etc.
+- `<body>`: contenido principal visible.
+
+Ejemplos de metadatos habituales en `<head>`:
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Descripción de la página">
+    <link rel="stylesheet" href="styles.css">
+
+## Elementos de bloque y de línea
+
+Dentro del `<body>` los elementos se dividen en:
+
+### Elementos de bloque (block)
+
+- Ocupan todo el ancho disponible.
+- Empiezan en una nueva línea.
+- Pueden contener otros elementos.
+
+Ejemplos:
+
+    <h1>...</h1>
+    <p>...</p>
+    <div>...</div>
+    <ul>...</ul>
+    <li>...</li>
+    <section>...</section>
+    <article>...</article>
+    <header>...</header>
+    <footer>...</footer>
+    <blockquote>...</blockquote>
+    <pre>...</pre>
+
+### Elementos de línea (inline)
+
+- Ocupan solo el espacio necesario.
+- Se colocan dentro de la línea, sin saltar a otra nueva.
+- Normalmente forman parte de un bloque.
+
+Ejemplos:
+
+    <a>...</a>
+    <em>...</em>
+    <strong>...</strong>
+    <span>...</span>
+    <q>...</q>
+    <img ...>
+    <code>...</code>
+    <abbr>...</abbr>
+    <cite>...</cite>
 
 
 
