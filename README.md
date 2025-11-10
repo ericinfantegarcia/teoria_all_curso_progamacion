@@ -125,3 +125,30 @@ Usamos tres acentos graves (backticks) antes y después del bloque:
      - Con tres backticks creamos bloques de código.
      - Podemos indicar el lenguaje (html, javascript, etc.) tras los tres backticks. -->
 
+### Enlaces
+
+Sintaxis básica:
+
+    [Texto del enlace](https://ejemplo.com/ "Título opcional del enlace")
+
+- El texto del enlace va entre corchetes `[]`.
+- La URL va entre paréntesis `()`.
+- El título entre comillas es opcional (aparece al pasar el ratón por encima).
+
+### Imágenes
+
+Sintaxis inline:
+
+    ![Texto alternativo](https://ruta-de-la-imagen.png "Título opcional de la imagen")
+
+Sintaxis con referencia:
+
+    ![alt text][logo]
+
+    [logo]: https://ruta-de-la-imagen.png "Título opcional"
+
+<!-- Explicación:
+     - La sintaxis de imagen es igual que la de enlace, pero con `!` delante.
+     - El texto alternativo describe la imagen y mejora la accesibilidad. -->
+
+
