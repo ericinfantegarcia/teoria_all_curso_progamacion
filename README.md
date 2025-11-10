@@ -608,4 +608,236 @@ Sintaxis básica:
 
 # Comentario: Siempre hay que indicar el atributo `alt` para accesibilidad, SEO y buena práctica.
 
+## Elementos semánticos en HTML5
+
+El HTML semántico es clave para usar correctamente HTML. Los elementos semánticos describen el significado del contenido que encierran.
+
+Un `<span>` agrupa contenido en línea y un `<div>` agrupa contenido en bloque, pero ninguno aporta significado semántico por sí mismo.  
+En cambio, los elementos semánticos indican qué tipo de contenido contienen.
+
+**Ejemplos de elementos semánticos:**
+
+- `<header>`
+- `<footer>`
+- `<article>`
+- `<section>`
+- `<nav>`
+- `<figure>`
+
+Estos elementos proporcionan información sobre el tipo de contenido que contienen y ayudan a estructurar mejor la página.
+
+# Comentario: El uso de elementos semánticos mejora accesibilidad, SEO y comprensión del código, porque cada zona tiene un rol claro.
+
+
+## Legibilidad y organización del código
+
+La legibilidad del código fuente es la claridad con la que está escrito, de forma que pueda entenderse de manera fácil y rápida.  
+Es fundamental que el código HTML que generemos sea legible.
+
+Debemos tener presente que normalmente no trabajaremos solos, por lo que un código claro ayuda a otros a entender qué hemos hecho y por qué.  
+Incluso si solo lo tocamos nosotros, un código legible facilita recordar y modificar el trabajo.
+
+Por **organización del código fuente** entendemos:
+
+- Estructurar la aplicación web en varios archivos.
+- Clasificar esos archivos en los directorios adecuados.
+
+**Técnicas para un código legible y bien organizado:**
+
+- Usar comentarios.
+- Mantener una indentación correcta.
+- Organizar los archivos y carpetas de forma lógica.
+
+# Comentario: Código limpio + indentación consistente + comentarios = mantenimiento mucho más fácil.
+
+
+## Comentarios en HTML
+
+En un documento HTML podemos añadir anotaciones que no se mostrarán en el navegador, pero que son útiles para el desarrollador.
+
+**Sintaxis:**
+
+    <!-- comentario -->
+
+Es muy importante comentar el código fuente, sobre todo si se trata de un documento largo o con muchas secciones.
+
+**Ejemplo:**
+
+    <body>
+        <!-- Cabecera -->
+        <!-- Menú de navegación -->
+        <!-- Columna lateral con enlaces -->
+        <!-- Sección principal con artículos -->
+        <!-- Pie de página -->
+    </body>
+
+# Comentario: Los comentarios permiten marcar secciones y entender rápidamente la estructura del documento.
+
+
+## Etiquetas básicas de HTML
+
+### Encabezados `<h1>` ... `<h6>`
+
+Permiten definir títulos y subtítulos del contenido.
+
+- Son elementos de bloque.
+
+### Párrafos `<p>`
+
+Se utilizan para encerrar párrafos de texto, es decir, frases relacionadas entre sí.
+
+- Son elementos de bloque.
+
+### Salto de línea `<br>`
+
+Inserta un salto de línea dentro de un texto sin crear un nuevo párrafo.
+
+- Es un elemento vacío (no tiene etiqueta de cierre).
+
+### Separador de línea `<hr>`
+
+Inserta una línea horizontal divisoria, útil para separar visualmente bloques de contenido.
+
+- Es un elemento vacío de bloque.
+
+### Énfasis `<em>` y `<strong>`
+
+- `<em>`: aplica énfasis (normalmente cursiva).
+- `<strong>`: aplica énfasis fuerte o importancia (normalmente negrita).
+
+### Span `<span>`
+
+`<span>` es un contenedor en línea que agrupa pequeñas partes de texto o elementos sin romper la línea, normalmente para aplicar estilos o identificar contenido.
+
+# Comentario: `<em>` y `<strong>` añaden significado (énfasis/importancia). `<span>` solo agrupa contenido en línea, sin semántica.
+
+
+## Listas en HTML
+
+### Listas desordenadas `<ul>`
+
+Se utilizan cuando el orden de los ítems no es relevante.
+
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+### Listas ordenadas `<ol>`
+
+Se utilizan cuando el orden sí es importante.
+
+    <ol>
+        <li>Paso 1</li>
+        <li>Paso 2</li>
+        <li>Paso 3</li>
+    </ol>
+
+Se puede cambiar el tipo de numeración con el atributo `type` (`1`, `A`, `a`, `I`, `i`) y ajustar el inicio con `start`.
+
+# Comentario: Cada elemento de lista debe ir siempre dentro de `<li>` para que la estructura sea correcta.
+
+
+## Listas de definición `<dl>`, `<dt>`, `<dd>`
+
+Las listas de definición representan términos y sus definiciones.
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcas para estructurar documentos en la web.</dd>
+
+        <dt>XML</dt>
+        <dd>Metalenguaje extensible de etiquetas para definir otros lenguajes.</dd>
+    </dl>
+
+- `<dl>`: lista de definición.
+- `<dt>`: término.
+- `<dd>`: definición del término.
+
+# Comentario: Útiles para glosarios y pares concepto–explicación.
+
+
+## Enlaces internos (anclas)
+
+En documentos largos podemos querer saltar a puntos concretos de la misma página.  
+Para ello usamos el atributo `id` y enlaces que apunten a ese `id`.
+
+**Definir el destino:**
+
+    <h2 id="seccion1">Sección 1</h2>
+
+**Enlace dentro de la misma página:**
+
+    <a href="#seccion1" title="Sección 1">Ir a la sección 1</a>
+
+**Enlace desde otro documento:**
+
+    <a href="secciones.html#seccion1" title="Sección 1">Ir a la sección 1</a>
+
+# Comentario: `id` marca el punto de destino y `href="#id"` o `href="archivo.html#id"` crea el enlace hacia esa ancla.
+
+
+## Contenedores `<div>`
+
+`<div>` es un contenedor de tipo bloque que se utiliza para agrupar otros elementos.
+
+**Usos principales:**
+
+- Dividir la página en secciones.
+- Aplicar estilos CSS a bloques concretos.
+- Manipular partes específicas con JavaScript.
+
+**Ejemplo:**
+
+    <div class="contenido">
+        <h2>Título de sección</h2>
+        <p>Texto dentro del contenedor.</p>
+    </div>
+
+# Comentario: `<div>` sirve para maquetar y agrupar, pero no indica por sí mismo el significado del contenido.
+
+
+## Rutas absolutas y relativas
+
+Cuando enlazamos a otros archivos (HTML, CSS, imágenes, etc.) necesitamos indicar su ubicación.
+
+### Ruta absoluta
+
+Incluye la dirección completa con dominio.
+
+    <img src="https://www.ejemplo.com/images/logo.png" alt="Logo Example">
+
+### Ruta relativa
+
+Se define en función de la ubicación del archivo actual.
+
+Estructura de ejemplo:
+
+    /mi-sitio/
+        index.html
+        /images/
+            logo.png
+
+Uso en `index.html`:
+
+    <img src="images/logo.png" alt="Logo de mi sitio">
+
+# Comentario: Las rutas relativas son recomendables dentro del mismo proyecto porque no dependen del dominio.
+
+
+## Imágenes en HTML
+
+Las imágenes son muy utilizadas para hacer más visual y atractiva una página web.
+
+La etiqueta para insertar imágenes es `<img>`, que es un elemento en línea y vacío.
+
+**Sintaxis básica:**
+
+    <img src="media/logo.png" alt="Logo de la web" />
+
+- `src`: ruta (absoluta o relativa) de la imagen.
+- `alt`: texto alternativo que se muestra si la imagen no carga y que usan los lectores de pantalla.
+
+# Comentario: Siempre se debe usar `alt` por accesibilidad, SEO y buenas prácticas.
 
