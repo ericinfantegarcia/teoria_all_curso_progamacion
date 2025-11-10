@@ -939,3 +939,113 @@ Botones de opción, permiten elegir **solo una** opción dentro de un grupo (mis
     <button type="submit">Enviar</button>
 </form>
 
+## Etiquetas de Tablas en HTML
+
+Las tablas se utilizan para mostrar datos en filas y columnas usando distintas etiquetas HTML.
+
+# Comentario: A continuación se resumen las etiquetas principales de tablas y sus atributos usando formato Markdown.
+
+### Estructura básica de una tabla
+
+| TAG      | Descripción                                                                                   |
+|----------|-----------------------------------------------------------------------------------------------|
+| `<table>`| Define el inicio de una tabla en HTML.                                                        |
+| `<thead>`| Agrupa el encabezado de la tabla; normalmente contiene celdas `<th>`.                         |
+| `<tbody>`| Agrupa el cuerpo de la tabla; separa el contenido del encabezado y del pie.                   |
+| `<tfoot>`| Agrupa el pie de tabla; suele usarse para totales o información final.                        |
+
+# Comentario: `<table>` es el contenedor general; `<thead>`, `<tbody>` y `<tfoot>` ayudan a organizar y dar significado a las partes de la tabla.
+
+### Filas y celdas
+
+| TAG    | Descripción                                                                                                 | Atributos comunes (ejemplos)                                                                                      |
+|--------|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| `<tr>` | Define una fila en la tabla.                                                                                | `align` (alineación horizontal), `bgcolor` (color de fondo), `valign` (alineación vertical).                       |
+| `<th>` | Define una celda de encabezado (texto en negrita y centrado por defecto).                                   | `colspan` (unir columnas), `rowspan` (unir filas), además de los de `<td>`.                                        |
+| `<td>` | Define una celda de datos dentro de una fila.                                                               | `colspan` (celda ocupa varias columnas), `rowspan` (celda ocupa varias filas), `align`, `valign`.                  |
+
+# Comentario: `colspan` y `rowspan` permiten combinar celdas para representar mejor ciertos datos.
+
+### Ejemplo completo de tabla en HTML
+
+```html
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ana</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Lucas</td>
+            <td>30</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Datos de ejemplo</td>
+        </tr>
+    </tfoot>
+</table>
+
+# Comentario: Resumen de HTML — elementos semánticos, formularios e introducción a tablas — en un único texto Markdown.
+
+## Elementos semánticos en HTML5
+
+El HTML semántico permite describir el contenido dándole un significado correcto. Mejora:
+
+- La accesibilidad.
+- El SEO.
+- La organización y mantenimiento del código.
+
+Elementos semánticos habituales:
+
+- `<header>`: cabecera de la página o sección.
+- `<footer>`: pie de página o sección.
+- `<nav>`: zona de navegación (menús, enlaces principales).
+- `<section>`: sección de contenido relacionado.
+- `<article>`: contenido independiente (post, noticia, entrada…).
+- `<aside>`: contenido relacionado o complementario (barras laterales, notas).
+- `<main>`: contenido principal del documento.
+- `<figure>`: contenido ilustrativo (imagen, gráfico, código, etc.).
+- `<figcaption>`: texto descriptivo de la figura.
+
+# Comentario: Usar elementos semánticos en lugar de solo `<div>` ayuda a que el navegador, buscadores y lectores de pantalla entiendan mejor la estructura.
+
+---
+
+## Legibilidad y organización del código
+
+La legibilidad es la claridad con la que está escrito el código para que una persona pueda entenderlo rápido.
+
+Puntos clave:
+
+- Es fundamental que el código HTML que generemos sea **legible**.
+- Normalmente no trabajaremos solos: un código claro ayuda al resto del equipo.
+- La organización del código incluye:
+  - Estructurar la aplicación en varios archivos cuando convenga.
+  - Clasificar los archivos en directorios lógicos.
+
+Técnicas importantes:
+
+- Usar comentarios.
+- Mantener una indentación coherente.
+- Seguir una estructura ordenada de secciones.
+
+# Comentario: Piensa en tu HTML como en apuntes que alguien más tiene que entender sin preguntarte.
+
+---
+
+## Comentarios en HTML
+
+Los comentarios permiten añadir notas internas en el código que no se muestran en la página.
+
+Sintaxis:
+
+```html
+<!-- comentario -->
