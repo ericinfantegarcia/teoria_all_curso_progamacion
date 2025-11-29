@@ -1260,3 +1260,30 @@ CSS:
     h1 { color: red !important; }
 
 En este caso, el `h1` se verá de color **rojo** porque la regla con `!important` tiene la máxima prioridad.
+
+# CSS: Evolución y función (2/2)
+
+Lo que ahora conocemos como CSS apareció cuando el W3C recibió 9 propuestas diferentes para hojas de estilo, de las cuales seleccionó dos: Cascading HTML Style Sheets (CHSS), propuesta por Håkon Wium Lie en 1994, y Stream-based Style Sheet Proposal (SSP). De ahí nacieron las Cascading Style Sheets (CSS), cuya primera versión, denominada CSS Level 1, fue propuesta como estándar a finales del año 1996.
+
+En mayo de 1998 se publicó el estándar CSS Level 2. Diez años después, en 2008, se realizó una revisión y se publicó el CSS Level 2 Revision 1, conocido como CSS2.1.
+
+**Actualmente se está trabajando con CSS3.** En este caso, la especificación está dividida en módulos, algunos de los cuales ya se han convertido en estándares, mientras que otros aún están en desarrollo.
+
+---
+
+# CSS: Sintaxis básica CSS (Estructura 1/3)
+
+Una hoja de estilos es un conjunto de reglas que definen la estética final de los documentos (X)HTML que la usan. **Cada regla está formada por un selector y un conjunto de declaraciones.**
+
+Una declaración está formada por una **propiedad** y su valor **asociado**.
+
+**Un selector nos sirve para definir a qué elemento o elementos queremos aplicar las declaraciones de la regla.** Las declaraciones son las diversas características que han de cumplir los elementos que concuerdan con el selector. A cada propiedad de cada declaración le ponemos el valor que sea necesario.
+
+### Estructura de ejemplo
+
+```css
+selector{
+    declaración_1
+    ...
+    declaración_n
+}
