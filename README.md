@@ -1352,3 +1352,38 @@ Se añaden las propiedades CSS directamente en el elemento usando el atributo `s
 
 ```html
 <p style="text-align:center; color:red">Paràgraf centrat vermell</p>
+
+
+# CSS: Ventajas e inconvenientes
+
+Las ventajas de usar hojas de estilo son:
+
+- Posibilidad de mantener el código más fácilmente.
+- A nivel de diseño, CSS es más potente que las etiquetas de diseño de (X)HTML.
+- CSS es un lenguaje sencillo.
+- Se pueden definir diferentes hojas de estilo para un solo documento (X)HTML, por ejemplo, un estilo para la página web cuando se visita desde un ordenador y otra para cuando queramos imprimirla.
+- Se pueden reutilizar desde diferentes documentos (X)HTML.
+
+El gran inconveniente es que **no todos los navegadores se comportan de la misma forma ante una hoja de estilo**, dado que algunos no cumplen con los estándares establecidos. Así, obligan al programador a crear diferentes hojas de estilo.
+
+---
+
+# CSS: Sintaxis básica CSS (Estructura 2/3)
+
+Una hoja de estilos es un conjunto de reglas que definen la estética final de los documentos (X)HTML que la usan.  
+**Cada regla está formada por un selector y un conjunto de declaraciones.**
+
+Una declaración está formada por una **propiedad** y su valor **asociado**.
+
+**Un selector nos sirve para definir a qué elemento o elementos queremos aplicar las declaraciones de la regla.**  
+Las declaraciones son las diversas características que han de cumplir los elementos que concuerdan con el selector.  
+A cada propiedad de cada declaración le ponemos el valor que sea necesario.
+
+### Estructura de ejemplo:
+
+```css
+selector{
+    declaración_1
+    ...
+    declaración_n
+}
