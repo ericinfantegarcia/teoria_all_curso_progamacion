@@ -1046,7 +1046,7 @@ Técnicas importantes:
 Los comentarios permiten añadir notas internas en el código que no se muestran en la página.
 
 
-## CSS
+## CSS 
 
 
 # CSS: Ubicación (1/4)
@@ -1287,3 +1287,68 @@ selector{
     ...
     declaración_n
 }
+
+
+# CSS: Prioridad (1/4)
+
+Podría darse el caso de que varias declaraciones CSS afectasen de forma diferente a un mismo elemento HTML, así pues, ¿cuál de ellas es la que tendrá preferencia?
+
+- En primer lugar, se comprueba si existe una hoja de estilos externa asociada al documento HTML (estilo externo). Si no existen estilos en otras ubicaciones, son los que se ejecutarán.
+
+- En segundo lugar, si hay alguna definición de estilos en el HEAD del documento HTML (estilo interno). En este caso, si alguna definición contradice a la definida en la hoja de estilos externa, tendrá prioridad la definición del estilo interno.
+
+- Por último, si hay alguna definición de estilos “inline”, en la propia etiqueta HTML, en caso de contradicción, tendrá prioridad la definida en la propia etiqueta.
+
+Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” lo situado más abajo en el documento y que en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, éstas se sumarán.
+
+---
+
+# CSS: Sintaxis básica CSS (Tipos de selectores)
+
+Hay diferentes selectores, cada uno de los cuales corresponde con una parte diferente del etiquetado.  
+Los más básicos son:
+
+1. Selector de elementos (selector de tipo)  
+2. Selector de id  
+3. Selector de clase  
+
+Selectores avanzados:
+
+4. Selector universal  
+5. Selectores de atributos  
+6. Selectores de hijos  
+7. Selectores de descendientes  
+8. Selectores de hermanos adyacentes  
+9. Pseudoclases  
+10. Pseudoelementos  
+
+---
+
+# CSS: Sintaxis básica CSS (Estructura 3/3)
+
+## Ejemplo práctico
+
+```css
+p {
+    font-size: 10pt;
+    background-color: gray;
+}
+
+
+# CSS: Ubicación (1/4)
+
+Los estilos se pueden asociar de diferentes maneras a los elementos (X)HTML dado que se pueden ubicar las propiedades CSS en diferentes ubicaciones:
+
+- Estilo “inline”. En la propia etiqueta.
+- Estilo “interno”. En la cabecera del documento (X)HTML.
+- Estilo “externo”. En un documento externo.
+
+---
+
+# CSS: Ubicación (2/4)
+
+En la etiqueta HTML (estilo “INLINE”).  
+Se añaden las propiedades CSS directamente en el elemento usando el atributo `style`. Por ejemplo:
+
+```html
+<p style="text-align:center; color:red">Paràgraf centrat vermell</p>
