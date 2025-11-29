@@ -1,3 +1,68 @@
+# Cómo crear un repositorio en GitHub
+
+A continuación se explica paso a paso cómo crear un nuevo repositorio en GitHub.  
+Este proceso te permite almacenar tu proyecto en la nube, versionarlo y trabajar con Git desde tu ordenador.
+
+---
+
+## 1. Acceder a tu perfil de GitHub
+
+Lo primero es iniciar sesión en tu cuenta de GitHub.
+
+![Pantalla de perfil de GitHub](./img_apuntes/captura_2025_11_20_124546.png)
+
+Desde aquí puedes ver tus repositorios, tus opciones de usuario y crear nuevos proyectos.
+
+---
+
+## 2. Crear un nuevo repositorio
+
+Haz clic en el botón **“New”** situado en la parte superior derecha.
+
+Esto abrirá el formulario de creación de repositorio:
+
+![Creación de nuevo repositorio](./img_apuntes/captura_2025_11_20_124513.png)
+
+En este formulario debes rellenar:
+
+- **Repository name:** nombre del repositorio  
+- **Description (opcional):** breve descripción del proyecto  
+- **Visibility:** elegir entre público o privado  
+- Activar o no:
+  - *Add README*
+  - *Add .gitignore*
+  - *Add license*
+
+Cuando todo esté configurado, pulsa **Create repository**.
+
+---
+
+## 3. Ver el repositorio recién creado
+
+Una vez creado, GitHub te redirige a la página principal del repositorio:
+
+![Página inicial del repositorio](./img_apuntes/captura_2025_11_20_124611.png)
+
+Aquí puedes ver:
+
+- Archivos del repositorio  
+- Botones para subir nuevos archivos  
+- Instrucciones para clonar el repo  
+- Opciones de branches, commits, settings, etc.
+
+---
+
+## 4. Clonar el repositorio en tu ordenador
+
+Para trabajar desde VS Code o la terminal, debes copiar la URL HTTPS del repositorio.
+
+![Opciones para clonar el repositorio](./img_apuntes/captura_2025_11_20_124719.png)
+
+Luego, en tu terminal:
+
+```bash
+git clone https://github.com/usuario/nombre_del_repositorio.git
+
 # Teoría Markdown
 ## Archivos Markdown
 
