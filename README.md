@@ -63,6 +63,23 @@ Luego, en tu terminal:
 ```bash
 git clone https://github.com/usuario/nombre_del_repositorio.git
 
+
+**1. Clonar el repositorio (solo la primera vez)**
+git clone "ENLACE_DEL_REPOSITORIO"
+
+**2. Inicializar Git (si no hay repositorio local)**
+git init
+
+**3. Añadir archivos al área de preparación**
+git add .
+
+**4. Crear un commit con un mensaje descriptivo**
+git commit -m "MENSAJE_DEL_COMMIT"
+
+**5. Subir los cambios al repositorio de GitHub**
+git push origin main
+
+
 # Teoría Markdown
 ## Archivos Markdown
 
