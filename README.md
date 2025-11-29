@@ -1045,7 +1045,218 @@ Técnicas importantes:
 
 Los comentarios permiten añadir notas internas en el código que no se muestran en la página.
 
-Sintaxis:
 
-```html
-<!-- comentario -->
+## CSS
+
+
+# CSS: Ubicación (1/4)
+
+## Ubicación de estilos CSS
+
+Los estilos se pueden asociar de diferentes maneras a los elementos (X)HTML.  
+Las propiedades CSS pueden colocarse en distintas ubicaciones:
+
+- **Estilo "inline"**. En la propia etiqueta.
+- **Estilo "interno"**. En la cabecera del documento (X)HTML.
+- **Estilo "externo"**. En un documento externo.
+
+---
+
+# CSS: Ubicación (4/4)
+
+## Estilo externo
+
+En un documento externo se colocan las propiedades de estilo en un archivo con extensión `.css`.  
+Desde el documento (X)HTML se enlaza esta hoja de estilo utilizando la etiqueta `<link>` dentro del elemento `<head>`.
+
+Ejemplo:
+
+### Documento (X)HTML
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="estils.css" type="text/css" />
+        </head>
+        <body>
+            <p>Paràgraf centrat vermell</p>
+        </body>
+    </html>
+
+### Archivo estils.css
+
+    p {
+        text-align: center;
+        color: red;
+    }
+
+---
+
+# CSS: Evolución y función (2/2)
+
+## Historia y evolución del CSS
+
+Lo que ahora conocemos como CSS apareció cuando el W3C recibió 9 propuestas de sistemas de hojas de estilo.  
+Finalmente seleccionó dos:
+
+- **CHSS (Cascading HTML Style Sheets)** — propuesta por Håkon Wium Lie en 1994.
+- **SSP (Stream-based Style Sheet Proposal)**.
+
+De estas propuestas nacieron las **Cascading Style Sheets (CSS)**.  
+La primera versión, **CSS Level 1**, fue propuesta como estándar a finales de 1996.
+
+En mayo de 1998 se publicó **CSS Level 2**.  
+En 2008 apareció una revisión: **CSS 2.1**.
+
+Actualmente se trabaja con **CSS3**, cuyas especificaciones se dividen en módulos.  
+Algunos ya son estándar y otros siguen en desarrollo.
+
+---
+
+# CSS: Sintaxis básica (Estructura 1/3)
+
+## Estructura de una regla CSS
+
+Una hoja de estilos contiene reglas que definen la estética de los documentos (X)HTML.
+
+Cada regla está formada por:
+
+- **Un selector**
+- **Un conjunto de declaraciones**
+
+Cada declaración se compone de:
+
+- **Propiedad**
+- **Valor**
+
+### Estructura general
+
+    selector {
+        declaración_1;
+        ...
+        declaración_n;
+    }
+
+### Ejemplo práctico
+
+    p {
+        font-size: 10pt;
+        background-color: gray;
+    }
+
+En este ejemplo:
+
+- `p` es el **selector**.
+- Dentro hay dos **declaraciones** con la forma `propiedad: valor;`.
+
+---
+
+# CSS: Sintaxis básica (Selectores básicos 2/3)
+
+## Selector de id
+
+Corresponde a todos los elementos HTML que tienen un atributo `id` con el valor especificado.
+
+Ejemplo de regla:
+
+    #example {
+        property: value1;
+        property2: value2;
+    }
+
+Esta regla afectará al elemento con el atributo `id` que coincida con el selector, por lo que el selector anterior afectaría al siguiente elemento HTML:
+
+    <p id="example">...</p>
+
+Varios elementos HTML no pueden tener el mismo atributo `id`, dado que el `id` debe distinguir de forma inequívoca a un único elemento HTML.  
+Para aplicar estilos a más de un elemento, se utiliza el atributo `class`.
+
+---
+
+# CSS: Prioridad (2/4)
+
+## 1. Especificidad
+
+La especificidad se calcula mediante un sistema de puntuación:
+
+- **Inline style (atributo `style` en HTML)**  
+  Especificidad = 1000  
+  Ejemplo:  
+      <div style="color: red;">
+
+- **Selectores de ID (`#id`)**  
+  Especificidad = 100  
+  Ejemplo:  
+      #header
+
+- **Selectores de clase, atributos y pseudoclases** (`.class`, `[attr=value]`, `:hover`, etc.)  
+  Especificidad = 10  
+  Ejemplo:  
+      .main  
+      input[type="text"]  
+      :focus
+
+- **Selectores de elementos y pseudoelementos** (`h1`, `p`, `::before`, etc.)  
+  Especificidad = 1  
+  Ejemplo:  
+      h1  
+      p
+
+- **Selector universal y combinadores** (`*`, `+`, `>`, `~`, etc.)  
+  No suman especificidad por sí mismos.
+
+Ejemplo práctico de especificidad:
+
+- `h1` → 1
+- `.box` → 10
+- `#main` → 100
+- `#main .box h1` → 111
+
+---
+
+## 2. Orden de aparición
+
+Si dos reglas tienen la **misma especificidad**, gana la última que aparezca en el archivo CSS o en las hojas vinculadas.
+
+---
+
+## 3. Reglas importantes (`!important`)
+
+Una regla con `!important` tiene prioridad sobre cualquier otra, aunque la otra tenga mayor especificidad.
+
+Ejemplo:
+
+    color: red !important;
+
+---
+
+## 4. Herencia
+
+Algunas propiedades, como:
+
+- `color`
+- `font-family`
+
+pueden **heredarse** de los elementos padre.  
+La herencia tiene menos prioridad que una regla aplicada directamente al elemento.
+
+---
+
+# CSS: Prioridad (3/4 - Ejemplo)
+
+## Ejemplo práctico de prioridad
+
+HTML:
+
+    <div id="main" class="box">
+        <h1 style="color: green;">Hello</h1>
+    </div>
+
+CSS:
+
+    h1 { color: blue; }
+    .box h1 { color: yellow; }
+    #main h1 { color: orange; }
+    h1 { color: red !important; }
+
+En este caso, el `h1` se verá de color **rojo** porque la regla con `!important` tiene la máxima prioridad.
